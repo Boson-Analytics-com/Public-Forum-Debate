@@ -1,0 +1,328 @@
+{
+  "parsed": 182,
+  "dropped": [
+    {
+      "url": "https://tinyurl.com/eur8r2cu",
+      "reason": "too_short",
+      "chars": 10
+    },
+    {
+      "url": "https://2021-2025.state.gov/humantrafficking-about-human-trafficking",
+      "reason": "too_short",
+      "chars": 237
+    },
+    {
+      "url": "http://axcrypt.net/blog/5-reasons-why-encryption-is-important-for-small-businesses?srsltid=AfmBOooQ0TJlYZeYCRccktoCdqLXb-Pz2ZpSsRdYz1lEW1B-oQEnHTLV",
+      "reason": "duplicate_of",
+      "canonical": "doc_abeabfb77507"
+    },
+    {
+      "url": "https://docs.google.com/document/d/1EpYFnLLnmf8CZFqMIBHMTL3-i9kWTTsR-YKdI7G9zpc/edit?tab=t.0",
+      "reason": "too_short",
+      "chars": 281
+    },
+    {
+      "url": "https://docs.un.org/en/S/2023/549",
+      "reason": "too_short",
+      "chars": 70
+    },
+    {
+      "url": "https://doi.org/10.1016/j.cose.2025.104606",
+      "reason": "too_short",
+      "chars": 0
+    },
+    {
+      "url": "https://drive.google.com/file/d/1eCgLvxqSXKqqEoCuOIUKHQRvaE9UgsRw/view?usp=sharing",
+      "reason": "too_short",
+      "chars": 10
+    },
+    {
+      "url": "https://heinonline.org/HOL/Page?handle=hein.journals%2Fmaine66&div=24&collection=journals",
+      "reason": "too_short",
+      "chars": 14
+    },
+    {
+      "url": "https://ijoc.org/index.php/ijoc/article/view/5524/1939",
+      "reason": "too_short",
+      "chars": 0
+    },
+    {
+      "url": "https://picum.org/blog/data-encryption-why-its-vital-for-migrants-and-their-defenders",
+      "reason": "too_short",
+      "chars": 0
+    },
+    {
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=43636",
+      "reason": "too_short",
+      "chars": 336
+    },
+    {
+      "url": "https://scholarlycommons.law.wlu.edu/wlulr/vol72/iss3/12",
+      "reason": "too_short",
+      "chars": 257
+    },
+    {
+      "url": "http://thefulcrum.us/civic-engagement-education/threat-to-democracy",
+      "reason": "duplicate_of",
+      "canonical": "doc_2e3e25bbd210"
+    },
+    {
+      "url": "http://www.amazon.com/Americas-War-Greater-Middle-East-ebook/dp/B0174PRIY4",
+      "reason": "too_short",
+      "chars": 127
+    },
+    {
+      "url": "http://www.amazon.com/Doomed-Succeed-U-S-Israel-Relationship-Truman/dp/0374141460",
+      "reason": "too_short",
+      "chars": 127
+    },
+    {
+      "url": "http://www.amazon.com/Never-Enough-Donald-Pursuit-Success/dp/1250042380",
+      "reason": "too_short",
+      "chars": 127
+    },
+    {
+      "url": "http://www.amazon.com/Search-Bill-Clinton-Psychological-Biography/dp/031236976X",
+      "reason": "too_short",
+      "chars": 127
+    },
+    {
+      "url": "http://www.amazon.com/Sociopath-Next-Door-Martha-Stout/dp/0767915828",
+      "reason": "too_short",
+      "chars": 127
+    },
+    {
+      "url": "http://www.amazon.com/The-End-Greatness-America-President/dp/1137279001",
+      "reason": "too_short",
+      "chars": 127
+    },
+    {
+      "url": "http://www.amazon.com/The-Narcissist-You-Know-All-About-Me/dp/1476785686",
+      "reason": "too_short",
+      "chars": 127
+    },
+    {
+      "url": "https://www.amnesty.org/en/documents/afr65/3577/2021/en",
+      "reason": "duplicate_of",
+      "canonical": "doc_89ccfc5de667"
+    },
+    {
+      "url": "https://www.amnesty.org/en/documents/pol40/3682/2016/en",
+      "reason": "too_short",
+      "chars": 184
+    },
+    {
+      "url": "https://www.bmi.gv.at/news.aspx?id=56656943686A57704749383D",
+      "reason": "too_short",
+      "chars": 272
+    },
+    {
+      "url": "https://www.docdroid.net/IHiIrMA/oll20597-pdf",
+      "reason": "too_short",
+      "chars": 0
+    },
+    {
+      "url": "https://www.eff.org/about/staff/thorin-klosowski-0",
+      "reason": "too_short",
+      "chars": 376
+    },
+    {
+      "url": "https://www.europol.europa.eu/media-press/newsroom/news/dismantling-encrypted-criminal-encrochat-communications-leads-to-over-6-500-arrests-and-close-to-eur-900-million-seized",
+      "reason": "too_short",
+      "chars": 33
+    },
+    {
+      "url": "https://www.europol.europa.eu/media-press/newsroom/news/europol-conference-warns-cybercrime-fight-hinges-access-to-data",
+      "reason": "too_short",
+      "chars": 33
+    },
+    {
+      "url": "https://www.europol.europa.eu/media-press/newsroom/news/international-operation-takes-down-another-encrypted-messaging-service-used-criminals",
+      "reason": "too_short",
+      "chars": 33
+    },
+    {
+      "url": "https://www.ft.com/content/fe04c6ed-73f8-4e17-852b-ce16fd6c3515",
+      "reason": "too_short",
+      "chars": 369
+    },
+    {
+      "url": "https://www.jstor.org/stable/27044234",
+      "reason": "too_short",
+      "chars": 209
+    },
+    {
+      "url": "https://www.jstor.org/stable/pdf/3810390.pdf?casa_token=4vyrjE_cY3QAAAAA%3AF3mWU09OdVVH2knnxAy1iMeWTJwFKKf9Hc9EU",
+      "reason": "too_short",
+      "chars": 209
+    },
+    {
+      "url": "https://www.justice.gov/archives/doj/blog/pittsburgh-post-gazette-op-ed-facebook-encryption-could-endanger-victims",
+      "reason": "too_short",
+      "chars": 0
+    },
+    {
+      "url": "http://www.mimecast.com/content/ransomware-statistics",
+      "reason": "duplicate_of",
+      "canonical": "doc_f10b7fd3b17a"
+    },
+    {
+      "url": "http://www.missingkids.org/blog/2025/ncmec-releases-new-data-2024-in-numbers",
+      "reason": "duplicate_of",
+      "canonical": "doc_af637ed25fc2"
+    },
+    {
+      "url": "https://www.policechiefmagazine.org/digital-shadows-encryption",
+      "reason": "too_short",
+      "chars": 0
+    },
+    {
+      "url": "http://www.politico.eu/article/police-ghost-encryption-app-drug-lords-mafia-europol",
+      "reason": "duplicate_of",
+      "canonical": "doc_17102bd19901"
+    },
+    {
+      "url": "http://www.progressivepolicy.org/wp-content/uploads/2024/03/PPI-Encryption-Final.pdf",
+      "reason": "duplicate_of",
+      "canonical": "doc_ebd1ed3254a3"
+    },
+    {
+      "url": "http://www.safeaustin.org/online-safety-for-children-and-teens-sex-trafficking-recruitment?scrlybrkr=58e5c7c7",
+      "reason": "duplicate_of",
+      "canonical": "doc_cb2ca4c57d51"
+    },
+    {
+      "url": "https://www.standard.co.uk/topic/islamic-state",
+      "reason": "too_short",
+      "chars": 227
+    },
+    {
+      "url": "https://www.syriaweekly.com/p/in-2024-isiss-resurgence-in-syria",
+      "reason": "too_short",
+      "chars": 391
+    },
+    {
+      "url": "http://www.uschamber.com/small-business/small-business-data-center",
+      "reason": "duplicate_of",
+      "canonical": "doc_2a58a7fc59c2"
+    },
+    {
+      "url": "http://www.vectra.ai/topics/backdoor",
+      "reason": "duplicate_of",
+      "canonical": "doc_1bee0610f438"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=nRPjLEBn2j0",
+      "reason": "too_short",
+      "chars": 55
+    },
+    {
+      "url": "https://paul-walsh.medium.com/why-lawful-access-for-encrypted-communications-is-just-a-back-door-with-better-pr-7d794835b7e4",
+      "reason": "duplicate_of",
+      "canonical": "doc_5fa26755df56"
+    },
+    {
+      "url": "https://www.fbi.gov/how-we-investigate/lawful-access/lawful-access-myths-vs-reality",
+      "reason": "duplicate_of",
+      "canonical": "doc_9c1d4e42c4ec"
+    },
+    {
+      "url": "https://www.fbi.gov/how-we-investigate/lawful-access",
+      "reason": "duplicate_of",
+      "canonical": "doc_532ca4f0fcde"
+    },
+    {
+      "url": "https://www.justice.gov/archives/doj/blog/pittsburgh-post-gazette-op-ed-facebook-encryption-could-endanger-victims",
+      "reason": "too_short",
+      "chars": 0
+    },
+    {
+      "url": "https://www.justice.gov/archives/opa/pr/four-defendants-charged-conspiring-provide-material-support-isis",
+      "reason": "duplicate_of",
+      "canonical": "doc_2ad0e723d142"
+    },
+    {
+      "url": "https://www.justice.gov/archives/opa/pr/us-department-justice-disrupts-hive-ransomware-variant",
+      "reason": "duplicate_of",
+      "canonical": "doc_5634f5408e97"
+    },
+    {
+      "url": "https://www.justice.gov/archives/opa/speech/attorney-general-william-p-barr-delivers-keynote-address-international-conference-cyber",
+      "reason": "duplicate_of",
+      "canonical": "doc_399e224252fa"
+    },
+    {
+      "url": "https://www.justice.gov/usao-sdca/pr/fbi-s-encrypted-phone-platform-infiltrated-hundreds-criminal-syndicates-result-massive",
+      "reason": "duplicate_of",
+      "canonical": "doc_d98c1c3c6139"
+    }
+  ],
+  "missing_date": [
+    "doc_abeabfb77507",
+    "doc_9732293b7137",
+    "doc_f10b7fd3b17a",
+    "doc_af637ed25fc2",
+    "doc_ebd1ed3254a3",
+    "doc_0f9c7622ba2d",
+    "doc_2dd84da44db5",
+    "doc_f894f2ce1796",
+    "doc_a43bac53f6b6",
+    "doc_85f163aa6ca6",
+    "doc_e974b1e5daa0",
+    "doc_b862b3b6be6f",
+    "doc_2bc115a05b69",
+    "doc_c1d80445da68",
+    "doc_96905a712ad8",
+    "doc_200f19db2331",
+    "doc_7f2e8dc29233",
+    "doc_9ed11e83aec0",
+    "doc_eecc34b34b40",
+    "doc_fc2768030017",
+    "doc_e2af3a75a720",
+    "doc_aaf48b147bc0",
+    "doc_7344eed00cf9",
+    "doc_a74e48d116b8",
+    "doc_39a1a41f92ea",
+    "doc_30073a3858a2",
+    "doc_cbb05ae26ec3",
+    "doc_c35407f41283",
+    "doc_33c3ec86f67c",
+    "doc_8fb6c0cf71e4",
+    "doc_de70a7d5e604",
+    "doc_916f413be39d",
+    "doc_94ce6fe5aaf5",
+    "doc_5eb4a668d7ab",
+    "doc_5d92fa288c77",
+    "doc_def0cf6c66a6",
+    "doc_3d522a8f51f0",
+    "doc_0ee0e5ee03c7",
+    "doc_717ab1dedfe4",
+    "doc_4598c5226158",
+    "doc_e3ccd09960e1",
+    "doc_11a290cd75c5",
+    "doc_e745bc56306b",
+    "doc_c5b9cd27b9d5",
+    "doc_b952de287339",
+    "doc_092387625f85",
+    "doc_9dcbaad21589",
+    "doc_929f3363e746",
+    "doc_09c0b1012a44",
+    "doc_20e4f2769adc",
+    "doc_7ef64c0a838f",
+    "doc_42b38cd83163",
+    "doc_e514b1780900",
+    "doc_b6e54346792f",
+    "doc_d51a2971f91d",
+    "doc_449a51b368e5"
+  ],
+  "missing_author_count": 72,
+  "bs4_fallback_count": 20,
+  "date_status_breakdown": {
+    "parsed": 101,
+    "regex": 25,
+    "missing": 53,
+    "unparsed:2022": 2,
+    "unparsed:Tue, 05/06/2025 - 12:00": 1
+  },
+  "median_chars": 7553
+}

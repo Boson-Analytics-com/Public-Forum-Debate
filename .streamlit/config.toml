@@ -1,0 +1,8 @@
+[server]
+# Streamlit's file watcher walks every loaded module to find files to watch.
+# Touching transformers' lazy submodules (pulled in by sentence-transformers)
+# imports image/video processors that need torchvision, which isn't installed,
+# flooding the log with ModuleNotFoundError tracebacks. It also only reloads
+# app.py itself, not round.py/debate.py/opponent.py -- so after editing those,
+# restart the app anyway.
+fileWatcherType = "none"

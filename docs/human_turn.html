@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Human Turn</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#F3F5F1;
+    --surface:#FDFEFC;
+    --ink:#182019;
+    --muted:#5B665D;
+    --rule:#D8DED4;
+    --verified:#1E7A52;
+    --verified-tint:#E4F1E9;
+    --tool:#3C5A78;
+    --tool-tint:#E6ECF1;
+    --con:#B14428;
+    --con-tint:#F6E7E1;
+    --clash:#9A6A0C;
+    --clash-tint:#F5EAD3;
+    --shadow:0 1px 2px rgba(24,32,25,.04), 0 1px 14px rgba(24,32,25,.05);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#10140F;
+      --surface:#171D15;
+      --ink:#E9EDE7;
+      --muted:#98A599;
+      --rule:#2A322A;
+      --verified:#4FCB92;
+      --verified-tint:rgba(79,203,146,.14);
+      --tool:#8FB3D6;
+      --tool-tint:rgba(143,179,214,.14);
+      --con:#E58B6C;
+      --con-tint:rgba(229,139,108,.14);
+      --clash:#E0AA46;
+      --clash-tint:rgba(224,170,70,.14);
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 1px 20px rgba(0,0,0,.25);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10140F;
+    --surface:#171D15;
+    --ink:#E9EDE7;
+    --muted:#98A599;
+    --rule:#2A322A;
+    --verified:#4FCB92;
+    --verified-tint:rgba(79,203,146,.14);
+    --tool:#8FB3D6;
+    --tool-tint:rgba(143,179,214,.14);
+    --con:#E58B6C;
+    --con-tint:rgba(229,139,108,.14);
+    --clash:#E0AA46;
+    --clash-tint:rgba(224,170,70,.14);
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 1px 20px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box;}
+  html, body{ margin:0; }
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    scroll-behavior:smooth;
+  }
+  @media (prefers-reduced-motion: reduce){ body{ scroll-behavior:auto; } }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width:860px; margin:0 auto; padding-inline:1.25rem; }
+  code, .mono{ font-family:"IBM Plex Mono", ui-monospace, "SF Mono", Consolas, monospace; }
+  h1,h2,h3{ text-wrap:balance; font-family:"IBM Plex Sans", sans-serif; }
+  a{ color:var(--verified); }
+  a:focus-visible, [tabindex]:focus-visible{ outline:2px solid var(--verified); outline-offset:3px; border-radius:3px; }
+
+  .topbar{
+    position:sticky; top:env(safe-area-inset-top, 0px); z-index:10;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .topbar-inner{
+    max-width:860px; margin:0 auto; padding:.85rem 1.25rem;
+    display:flex; align-items:baseline; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+  }
+  .topbar-title{
+    font-family:"Big Shoulders Display", sans-serif; font-weight:900; font-size:1.25rem;
+    letter-spacing:.02em; text-transform:uppercase;
+  }
+  .topnav{ display:flex; gap:1.1rem; flex-wrap:wrap; }
+  .topnav a{ font-size:.82rem; font-weight:600; color:var(--muted); text-decoration:none; letter-spacing:.02em; }
+  .topnav a:hover{ color:var(--verified); }
+
+  header.lede{ padding:3rem 0 1.75rem; }
+  .eyebrow{
+    font-family:"IBM Plex Mono", monospace; font-size:.78rem; font-weight:500;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--verified); margin-bottom:.9rem;
+  }
+  h1.title{
+    font-family:"Big Shoulders Display", sans-serif; font-weight:900;
+    font-size:clamp(2.2rem, 6.5vw, 3.4rem); line-height:.97; margin:0 0 1rem;
+  }
+  .dek{ max-width:64ch; font-size:1.05rem; color:var(--muted); margin:0 0 1.5rem; }
+  .dek strong{ color:var(--ink); font-weight:600; }
+
+  .doorbox{
+    background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+    padding:1.3rem 1.5rem; box-shadow:var(--shadow); display:grid; gap:1rem; margin-bottom:.5rem;
+  }
+  .door{ display:grid; grid-template-columns:auto 1fr; gap:.9rem; align-items:start; }
+  .door-mark{
+    font-family:"Big Shoulders Display", sans-serif; font-weight:900; font-size:1.5rem;
+    color:var(--muted); line-height:1;
+  }
+  .door p{ margin:0; font-size:.92rem; color:var(--muted); }
+  .door p b{ color:var(--ink); }
+  .door p code{ color:var(--ink); }
+
+  section{ padding:2.5rem 0; border-top:1px solid var(--rule); }
+  .section-kicker{
+    font-family:"IBM Plex Mono", monospace; font-size:.75rem; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--muted); margin-bottom:.4rem;
+  }
+  .section-intro{ color:var(--muted); max-width:66ch; font-size:.96rem; margin:.3rem 0 0; }
+
+  /* ---------- turn cards ---------- */
+  .turn-card{
+    background:var(--surface); border:1px solid var(--rule); border-radius:12px;
+    padding:1.6rem 1.7rem; box-shadow:var(--shadow); margin-bottom:1.4rem;
+  }
+  .turn-head{ display:flex; align-items:baseline; gap:1rem; margin-bottom:.3rem; flex-wrap:wrap; }
+  .turn-num{
+    font-family:"Big Shoulders Display", sans-serif; font-weight:900; font-size:1.9rem;
+    color:var(--verified); line-height:1;
+  }
+  .turn-title{ font-size:1.25rem; font-weight:700; margin:0; }
+  .turn-sub{
+    font-family:"IBM Plex Mono", monospace; font-size:.78rem; color:var(--muted);
+    margin:0 0 1.1rem;
+  }
+  .turn-note{ font-size:.92rem; color:var(--muted); max-width:70ch; margin:0 0 1.1rem; }
+  .turn-note code{ color:var(--ink); }
+
+  .lanes{ display:grid; grid-template-columns:1fr auto 1fr; gap:1rem; align-items:start; }
+  @media (max-width:680px){ .lanes{ grid-template-columns:1fr; } .lane-connector{ display:none; } }
+  .lane{ border-radius:10px; padding:1.1rem 1.2rem; border:1px solid var(--rule); }
+  .lane.you{ background:var(--verified-tint); border-color:color-mix(in srgb, var(--verified) 35%, var(--rule)); }
+  .lane.tool{ background:var(--tool-tint); border-color:color-mix(in srgb, var(--tool) 35%, var(--rule)); }
+  .lane-label{
+    font-family:"IBM Plex Mono", monospace; font-size:.7rem; font-weight:700;
+    letter-spacing:.07em; text-transform:uppercase; margin-bottom:.6rem; display:block;
+  }
+  .lane.you .lane-label{ color:var(--verified); }
+  .lane.tool .lane-label{ color:var(--tool); }
+  .lane ul{ margin:0; padding-left:1.1rem; font-size:.89rem; color:var(--ink); display:grid; gap:.5rem; }
+  .lane ul li::marker{ color:var(--muted); }
+  .lane code{ font-size:.85em; background:color-mix(in srgb, var(--surface) 60%, transparent); }
+  .lane-connector{
+    display:flex; align-items:center; justify-content:center; height:100%;
+    font-size:1.4rem; color:var(--muted); padding-top:2rem;
+  }
+  .lane-chips{ display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.8rem; }
+  .chip{
+    font-family:"IBM Plex Mono", monospace; font-size:.68rem; font-weight:500;
+    padding:.2rem .5rem; border-radius:99px; white-space:nowrap;
+  }
+  .chip.guard{ background:color-mix(in srgb, var(--verified) 16%, var(--surface)); color:var(--verified); }
+  .chip.warn{ background:color-mix(in srgb, var(--clash) 18%, var(--surface)); color:var(--clash); }
+  .chip.gap{ background:color-mix(in srgb, var(--con) 16%, var(--surface)); color:var(--con); }
+
+  .callout{
+    font-size:.88rem; color:var(--muted); background:var(--con-tint); border-radius:8px;
+    padding:.8rem 1rem; margin-top:1.1rem;
+  }
+  .callout b{ color:var(--con); }
+  .callout code{ color:var(--ink); }
+
+  /* ---------- asymmetry list ---------- */
+  .limits{ display:grid; gap:.9rem; }
+  .limit{ display:grid; grid-template-columns:auto 1fr; gap:.9rem; align-items:start; }
+  .limit-mark{
+    font-family:"Big Shoulders Display", sans-serif; font-weight:900; font-size:1.4rem;
+    color:var(--con); line-height:1; padding-top:.1rem;
+  }
+  .limit p{ margin:0; font-size:.93rem; color:var(--muted); }
+  .limit p code{ color:var(--ink); }
+  .limit p b{ color:var(--ink); }
+
+  footer{
+    padding:2.5rem 0 calc(2.5rem + env(safe-area-inset-bottom, 0px));
+    border-top:1px solid var(--rule); color:var(--muted); font-size:.82rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-title">The Human Turn</div>
+    <nav class="topnav">
+      <a href="#constructive">Constructive</a>
+      <a href="#crossfire">Crossfire</a>
+      <a href="#rebuttal">Rebuttal</a>
+      <a href="#closing">Summary/Final</a>
+      <a href="#unchecked">Unchecked</a>
+      <a href="flowsheet.html">↩ Flowsheet</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="lede">
+    <div class="eyebrow">Companion to Flowsheet — the human-in-the-loop path</div>
+    <h1 class="title">When you're the one talking back.</h1>
+    <p class="dek">
+      <code class="mono">engine.py run</code>/<code class="mono">batch</code> never involve a person —
+      <code class="mono">opponent.py</code> generates every attack. Add <code class="mono">--human-side</code>
+      (via <code class="mono">round.py debate-*</code> or <code class="mono">engine.py debate</code>) and a
+      real person types the questions, answers, rebuttals, and closing speeches instead. This page follows
+      <strong>your actual keystrokes</strong> through the code, stage by stage: which function catches what
+      you type, what it checks — and, just as importantly, what it doesn't.
+    </p>
+
+    <div class="doorbox">
+      <div class="door">
+        <div class="door-mark">1</div>
+        <p><b>The side door (manual, easy to miss):</b> the older self-play CLI. <code>python round.py incoming --text "..."</code>
+        and <code>python round.py attack --text "..."</code> both take free text on the command line —
+        normally <code>opponent.py</code> supplies it automatically during a self-play round, but nothing
+        stops you from typing <code>--text</code> yourself. <code>incoming()</code> hands your text straight
+        to <code>debate.py</code>'s <code>respond()</code> — the same pipeline described under Crossfire below
+        — and prints a real answer. <code>attack()</code> only logs your text and grades it
+        (<code>kb.rebut()</code>) for later weighing; it never generates a response at all.</p>
+      </div>
+      <div class="door">
+        <div class="door-mark">2</div>
+        <p><b>The real door:</b> the symmetric PF debate. Everything from here down assumes this path —
+        <code>round.py debate-start</code> / <code>debate-run</code>, or <code>engine.py debate --human-side pro|con</code>.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CONSTRUCTIVE ============ -->
+  <section id="constructive">
+    <div class="section-kicker">PF steps 1–2 · pro, then con</div>
+    <h2 class="turn-title" style="font-size:1.6rem;">Constructive</h2>
+    <p class="section-intro">The only stage where you're offered a shortcut — and the only one where anything you write gets checked against anything at all.</p>
+
+    <div class="turn-card" style="margin-top:1.5rem;">
+      <p class="turn-note">
+        First, one hard question with no default: <code>_ask_kb_or_own()</code> asks
+        <i>"Build your {SIDE} case from the knowledge base, or write your own contentions? [kb/own]"</i>
+        and re-prompts on anything that isn't exactly <code>kb</code> or <code>own</code>.
+      </p>
+      <div class="lanes">
+        <div class="lane you">
+          <span class="lane-label">You type</span>
+          <ul>
+            <li><b>kb</b> — nothing further to type; your case becomes <code>case_{side}.json</code>, verbatim.</li>
+            <li><b>own</b> — paste your <em>entire</em> speech in one shot, ended with a line that's just <code>END</code> (<code>_collect_multiline()</code>).</li>
+          </ul>
+        </div>
+        <div class="lane-connector">→</div>
+        <div class="lane tool">
+          <span class="lane-label">What happens to it (own)</span>
+          <ul>
+            <li><code>debate.py</code>'s <code>extract_contentions_from_speech()</code> asks the model only for <b>line-number ranges</b> — never to reproduce your words — so each contention's <code>text</code> is sliced straight out of your own paste. Verbatim by construction, not by checking afterward.</li>
+            <li>The one thing the model <i>does</i> reproduce is a short <code>quote</code>, if a contention claims one. That gets checked as a substring of your <b>whole</b> paste; one it can't find gets silently dropped.</li>
+            <li>KB backfill is offered unconditionally: any strong KB area you didn't cover gets listed, and you choose yes/no.</li>
+            <li>An empty paste (or zero contentions after a declined backfill) restarts this whole stage — <code>pick_target()</code> downstream indexes into contention&nbsp;#1 unconditionally and would crash with <code>IndexError</code> on an empty case.</li>
+          </ul>
+          <div class="lane-chips">
+            <span class="chip guard">quote checked against your full paste</span>
+          </div>
+        </div>
+      </div>
+      <div class="callout">
+        <b>Not checked:</b> only the <code>quote</code> field goes through any verification. Your claim, your
+        warrant, your impact — none of it is checked against the knowledge base or anything else. You could
+        argue something the corpus flatly contradicts and <code>own</code> mode accepts it as written.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CROSSFIRE ============ -->
+  <section id="crossfire">
+    <div class="section-kicker">PF steps 3, 6, 9 · crossfire_1, crossfire_2, grand_crossfire</div>
+    <h2 class="turn-title" style="font-size:1.6rem;">Crossfire</h2>
+    <p class="section-intro">
+      Asker and answerer alternate every exchange, up to <code>--exchanges</code> volleys (default 6),
+      ending early on "Continue? [Y/n]". The target contention is never asked for on either side — it's
+      auto-picked as whichever opposing contention has been hit the <em>fewest</em> times so far
+      (your turn: <code>_pick_target_contention()</code>; the tool's turn: <code>pick_target()</code>'s
+      attack-count-first sort — same spreading principle, both directions).
+    </p>
+
+    <div class="turn-card" style="margin-top:1.5rem;">
+      <p class="turn-sub">when it's your question</p>
+      <div class="lanes">
+        <div class="lane you">
+          <span class="lane-label">You ask</span>
+          <ul>
+            <li><code>_collect_multiline()</code> collects your question; a blank re-prompts until you type something.</li>
+            <li>Logged straight into the attack graph — no evidence attached. <code>attack_evidence_used: []</code>: "human questions aren't tied to KB claim_ids (yet)."</li>
+          </ul>
+        </div>
+        <div class="lane-connector">→</div>
+        <div class="lane tool">
+          <span class="lane-label">The tool answers</span>
+          <ul>
+            <li><code>_debate_tool_answers()</code> first runs <code>validate_query()</code>: under 4 words, or a placeholder like "the argument"/"test", gets deflected with a canned line — instead of the <code>SystemExit</code> the standalone CLI would raise, which would otherwise kill the whole multi-stage debate over one throwaway line.</li>
+            <li>Otherwise <code>debate.py</code>'s <code>respond()</code>: retrieves your side's real evidence against your question (<code>kb.rebut()</code>), grades it <b>strong / thin / none</b>, and drafts an answer in that register.</li>
+            <li>On a <b>none</b> answer only: scans its own text for fabricated-looking years/percentages/studies, regenerates once, hard-blocks with a canned refusal if it still fabricates — and logs the gap to <code>gaps.jsonl</code>.</li>
+          </ul>
+          <div class="lane-chips"><span class="chip guard">citation guard (tool's answer only)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="turn-card">
+      <p class="turn-sub">when the tool asks you</p>
+      <div class="lanes">
+        <div class="lane tool">
+          <span class="lane-label">The tool asks</span>
+          <ul>
+            <li><code>_debate_tool_asks()</code> reuses <code>opponent.py</code>'s <code>do_attack()</code> in reverse — same <code>pick_target()</code> spreading, same KB retrieval against your side.</li>
+            <li>Citation guard, <b>plus</b> a second, independent check: the <b>mechanism-swap guard</b> (<code>_mechanism_guarded()</code>) — a checker call asks whether the attack argues the resolution's actual mechanism or quietly swapped in a different policy. One retry, then a <code>mechanism_swap_flag</code> if it's still swapped.</li>
+            <li>Stage-aware: <code>crossfire_1</code> attacks your constructive, <code>crossfire_2</code> attacks your <b>rebuttal</b>, <code>grand_crossfire</code> attacks your <b>summary</b> — and it's shown its own asker-side speech too, so it compares rather than reacts blind.</li>
+          </ul>
+          <div class="lane-chips">
+            <span class="chip guard">citation guard</span>
+            <span class="chip warn">mechanism-swap guard</span>
+          </div>
+        </div>
+        <div class="lane-connector">→</div>
+        <div class="lane you">
+          <span class="lane-label">You answer</span>
+          <ul>
+            <li><code>_collect_multiline()</code> again.</li>
+            <li>Marked <code>answered = bool(your_text.strip())</code> — that's the <em>entire</em> check. Not graded for relevance, evidence, or whether it actually addresses the question.</li>
+          </ul>
+          <div class="lane-chips"><span class="chip gap">no strength grading on your answers</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REBUTTAL ============ -->
+  <section id="rebuttal">
+    <div class="section-kicker">PF steps 4–5 · pro, then con — fixed order</div>
+    <h2 class="turn-title" style="font-size:1.6rem;">Rebuttal</h2>
+
+    <div class="turn-card" style="margin-top:1.5rem;">
+      <div class="lanes">
+        <div class="lane you">
+          <span class="lane-label">You type</span>
+          <ul>
+            <li>Same paste-until-<code>END</code> collection, but via the raw <code>debate_ask()</code> loop directly — not <code>_collect_multiline()</code>. This is the exact function still exposed to the bracketed-paste desync bug noted elsewhere in this codebase.</li>
+            <li>Logged as <b>one</b> attack against the auto-picked target contention. <code>response</code>/<code>answered</code> start as <code>None</code> — not "unanswered," genuinely not-yet-evaluated.</li>
+          </ul>
+          <div class="lane-chips"><span class="chip gap">raw input() — no paste-safety helper</span></div>
+        </div>
+        <div class="lane-connector">→</div>
+        <div class="lane tool">
+          <span class="lane-label">The tool's rebuttal — two jobs, one speech</span>
+          <ul>
+            <li><code>do_rebuttal_speech()</code> attacks <b>every</b> one of your contentions by name — one KB lookup each, with claim_ids already used by an earlier contention stripped from later ones, so the same card can't cover two sections of one speech. Explicitly <b>not</b> mechanism-guarded: that checker compares one text to one contention, and doesn't fit a speech covering several.</li>
+            <li>Then <code>_debate_tool_answers()</code> loops over every still-open hit on the tool's <em>own</em> case (skipping anything already answered live in crossfire) to actually defend it. The two halves are joined by an explicit transition line, not just concatenated.</li>
+          </ul>
+          <div class="lane-chips">
+            <span class="chip guard">citation guard (per-contention)</span>
+            <span class="chip warn">no mechanism-swap guard here</span>
+          </div>
+        </div>
+      </div>
+      <div class="callout">
+        <b>Turn-order quirk:</b> whether your rebuttal-attack gets an in-round answer depends on which side
+        you're arguing, since rebuttal is always pro-then-con. Argue <b>pro</b>, and the tool's (con's)
+        rebuttal comes right after yours and picks your attack straight out of its unanswered hits. Argue
+        <b>con</b>, and the tool's (pro's) rebuttal already ran <em>before</em> you typed anything — your
+        rebuttal-attack can sit at <code>answered: None</code> for the rest of the round unless a later
+        crossfire happens to land on that same contention.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUMMARY / FINAL FOCUS ============ -->
+  <section id="closing">
+    <div class="section-kicker">PF steps 7–8 and 10–11</div>
+    <h2 class="turn-title" style="font-size:1.6rem;">Summary &amp; Final Focus</h2>
+    <p class="section-intro">The two stages where nothing you type is examined at all — by either side.</p>
+
+    <div class="turn-card" style="margin-top:1.5rem;">
+      <div class="lanes">
+        <div class="lane you">
+          <span class="lane-label">You type</span>
+          <ul>
+            <li>Same raw <code>debate_ask()</code>/<code>END</code> collection as rebuttal.</li>
+            <li>Stored completely verbatim, <code>source: "human"</code>. No extraction, no quote check, no citation guard — nothing runs on it. Whatever you typed is exactly what reaches the transcript, and the judge.</li>
+          </ul>
+          <div class="lane-chips"><span class="chip gap">zero verification of any kind</span></div>
+        </div>
+        <div class="lane-connector">→</div>
+        <div class="lane tool">
+          <span class="lane-label">The tool's closing speeches</span>
+          <ul>
+            <li><b>Summary:</b> <code>DEBATE_SUMMARY_SYSTEM</code> is built from the actual accumulated speech <em>text</em> already on record — both sides' constructive and rebuttal, pasted directly into the system prompt — not a fresh KB lookup.</li>
+            <li><b>Final focus:</b> same shape, built from both sides' summaries plus a condensed grand-crossfire highlights reel (truncated per exchange).</li>
+            <li>Both are told, in the prompt, to only reference material already introduced this round. That's an instruction, not a code-enforced check — <code>debate_summary_or_final()</code> never calls the citation guard at all.</li>
+          </ul>
+          <div class="lane-chips"><span class="chip gap">no citation guard on either speech, either side</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UNCHECKED ============ -->
+  <section id="unchecked">
+    <div class="section-kicker">The pattern, pulled together</div>
+    <h2 class="turn-title" style="font-size:1.6rem;">What never gets fact-checked</h2>
+    <p class="section-intro">Every guard in this codebase points the same direction: at the tool's own output. Nothing ever points back at you.</p>
+
+    <div class="limits" style="margin-top:1.5rem;">
+      <div class="limit">
+        <div class="limit-mark">!</div>
+        <p><b>Only one field of yours is ever verified.</b> A claimed <code>quote</code> in your <code>own</code>-mode constructive case is checked against your own paste — nothing else you write, in any stage, is checked against the knowledge base or anything at all.</p>
+      </div>
+      <div class="limit">
+        <div class="limit-mark">!</div>
+        <p><b>Your crossfire answers are graded on presence, not content.</b> <code>answered = bool(text)</code> — any non-blank reply counts as a successful defense, regardless of whether it actually engages the question.</p>
+      </div>
+      <div class="limit">
+        <div class="limit-mark">!</div>
+        <p><b>Rebuttal, summary, and final focus are trusted completely verbatim.</b> No extraction, no guard, no check of any kind runs on those three stages for the human side.</p>
+      </div>
+      <div class="limit">
+        <div class="limit-mark">!</div>
+        <p><b>The citation guard only ever scans the tool's own text</b> — its crossfire answers, its attacks, and the no-evidence half of its rebuttal speech. It has never once run on anything a human typed.</p>
+      </div>
+      <div class="limit">
+        <div class="limit-mark">!</div>
+        <p><b>The mechanism-swap guard covers even less</b>: only a single <code>do_attack()</code> call (one crossfire question). Not the tool's own rebuttal speech, and nothing on the human side, ever.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Companion to <a href="flowsheet.html">Flowsheet</a>. Generated from the checked-in source —
+    not a git repository, so treat this as a snapshot rather than a changelog.
+  </footer>
+
+</div>
+</body>
+</html>

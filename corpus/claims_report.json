@@ -1,0 +1,18 @@
+{
+  "chunks_processed": 2101,
+  "claims_total": 1369,
+  "claims_this_run": 1071,
+  "quotes_rejected": 81,
+  "rejection_rate_pct": 7.0,
+  "whitespace_matches": 7,
+  "retried_chunks": 8,
+  "empty_chunks": 1631,
+  "api_errors": 9,
+  "bad_json": 0,
+  "stance_balance": {
+    "pro": 453,
+    "con": 878,
+    "neutral": 38
+  },
+  "claims_per_chunk": 0.62
+}

@@ -1,0 +1,19 @@
+.env
+venv/
+__pycache__/
+*.pyc
+_archive/
+.streamlit/secrets.toml
+
+# generated data the app doesn't need
+corpus/raw/
+corpus/documents.jsonl
+corpus/chunks.jsonl
+corpus/manifest.jsonl
+corpus/claims.jsonl
+corpus/rounds/
+
+# personal debate history
+corpus/debate_state.json
+corpus/debates/
+corpus/gaps.jsonl

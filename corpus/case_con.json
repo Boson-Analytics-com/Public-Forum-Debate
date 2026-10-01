@@ -1,0 +1,168 @@
+{
+  "resolution": "Resolved: The United States federal government should require technology companies to provide lawful access to encrypted communications.",
+  "side": "con",
+  "contentions": [
+    {
+      "area": "cybersecurity_risk",
+      "text": "I'm arguing against the resolution, and my contention is about cybersecurity risk. Here's the fundamental problem: mandating lawful access to encrypted communications would create exploitable vulnerabilities that sophisticated adversaries can weaponize. \n\nHere's how this works. A backdoor, by definition, is \"a method that bypasses normal authentication and encryption in a computer system, application, or network device, providing unauthorized remote access while remaining hidden from standard security measures.\" Once the government requires these backdoors to exist in encryption systems, they become targets. We've already seen this in practice. The threat actor UNC5221 maintained backdoor access to US legal firms and technology companies for an average of 393 days without detection. That's over a year of undetected infiltration. If we mandate government backdoors, we're essentially handing adversaries the same entry points law enforcement would use.\n\nThe impact is severe. Any backdoor we build for lawful access becomes a permanent vulnerability in our infrastructure. Foreign intelligence services, criminal organizations, and hostile actors would all exploit these same weaknesses. We'd be systematically undermining the encryption that protects American businesses, government communications, and critical infrastructure—all in the name of security.",
+      "claim_ids": [
+        "doc_3a7d986adfb2_c000_k00",
+        "doc_3a7d986adfb2_c001_k00",
+        "doc_48d3fb71ae2d_c002_k01",
+        "doc_48d3fb71ae2d_c003_k01",
+        "doc_1bee0610f438_c000_k00",
+        "doc_1bee0610f438_c000_k01"
+      ],
+      "title": "Cybersecurity Risk",
+      "claim": "Mandatory lawful access requirements would threaten a rapidly growing encryption-as-a-service market worth tens of billions of dollars",
+      "warrant": "The encryption-as-a-service market is projected to grow from $2.20 billion in 2025 to $24.94 billion by 2036, driven by regulatory mandates and enterprise adoption; backdoor requirements could undermine this infrastructure",
+      "evidence": [
+        {
+          "quote": "The encryption as a service market was valued at USD 2.20 billion in 2025, projected to reach USD 2.74 billion in 2026, and is forecast to expand to USD 24.94 billion by 2036 at a 24.7% CAGR.",
+          "cite": "Sudip Saha -- Explore the Global Encryption As A Service Market— analysis of key trends, regional growth, top players, and a 10-year forecast from 2026 to 2036. -- www.futuremarketinsights.com -- 2026-03-25",
+          "claim": "Mandatory lawful access requirements would threaten a rapidly growing encryption-as-a-service market worth tens of billions of dollars",
+          "claim_id": "doc_3a7d986adfb2_c000_k00"
+        },
+        {
+          "quote": "GDPR, PCI DSS 4.0, HIPAA, PIPL, and equivalent national frameworks mandate encryption as a baseline data protection control across all enterprise data environments.",
+          "cite": "Sudip Saha -- Explore the Global Encryption As A Service Market— analysis of key trends, regional growth, top players, and a 10-year forecast from 2026 to 2036. -- www.futuremarketinsights.com -- 2026-03-25",
+          "claim": "Government encryption mandates are driving significant market growth in encryption-as-a-service globally",
+          "claim_id": "doc_3a7d986adfb2_c001_k00"
+        },
+        {
+          "quote": "As long as the same mercenary spyware tech is going to multiple governments, there is a baked-in counterintelligence risk. Since all of them now know what secret surveillance tech the US is using, and would have special insights on how to detect it and track what the US is doing with it",
+          "cite": "Stephanie Kirchgaessner -- Ice obtains access to Israeli-made spyware that can hack phones and encrypted apps | ICE (US Immigration and Customs Enforcement) | The Guardian -- www.theguardian.com -- 2026-03-06",
+          "claim": "Using shared surveillance technology across multiple governments creates counterintelligence vulnerabilities for the United States",
+          "claim_id": "doc_48d3fb71ae2d_c002_k01"
+        },
+        {
+          "quote": "Since all of them now know what secret surveillance tech the US is using, and would have special insights on how to detect it and track what the US is doing with it",
+          "cite": "Stephanie Kirchgaessner -- Ice obtains access to Israeli-made spyware that can hack phones and encrypted apps | ICE (US Immigration and Customs Enforcement) | The Guardian -- www.theguardian.com -- 2026-03-06",
+          "claim": "Foreign knowledge of US surveillance technology creates national security vulnerabilities",
+          "claim_id": "doc_48d3fb71ae2d_c003_k01"
+        },
+        {
+          "quote": "the BRICKSTORM campaign alone compromised defense contractors, legal services firms, and business process outsourcing companies across multiple sectors. With 37% of all malware attacks now involving backdoors and average breach costs reaching $4.7 million in 2025",
+          "cite": "Lucie Cardiet -- Backdoors in Cybersecurity: Complete Detection and Prevention Guide -- www.vectra.ai -- 2026-02-19",
+          "claim": "Mandating lawful access backdoors creates exploitable vulnerabilities that sophisticated threat actors can leverage for long-term undetected infiltration",
+          "claim_id": "doc_1bee0610f438_c000_k00"
+        },
+        {
+          "quote": "A backdoor is a method that bypasses normal authentication and encryption in a computer system, application, or network device, providing unauthorized remote access while remaining hidden from standard security measures",
+          "cite": "Lucie Cardiet -- Backdoors in Cybersecurity: Complete Detection and Prevention Guide -- www.vectra.ai -- 2026-02-19",
+          "claim": "Backdoors fundamentally undermine encryption and authentication, making them inherently dangerous as a security mechanism",
+          "claim_id": "doc_1bee0610f438_c000_k01"
+        }
+      ],
+      "impact": "Forcing backdoors into encryption services would disrupt a high-growth cybersecurity sector and impose significant economic costs on companies and cloud service providers"
+    },
+    {
+      "area": "privacy_civil_liberties",
+      "text": "I'm going to argue that mandated backdoors fundamentally destroy the security guarantees encryption provides to everyone. Here's why this matters: client-side scanning doesn't just create a technical loophole—it obliterates the entire premise of end-to-end encryption. According to the Electronic Frontier Foundation, \"client-side scanning fundamentally undermines end-to-end encryption, and obliterates our right to private spaces. If the government has access to one of the 'ends' of an end-to-end encrypted communication, that communication is no longer safe and secure.\" Once you give government access to one endpoint, the encryption is broken. It doesn't matter how carefully we write the law or how good the intentions are. The security architecture collapses. And here's the cascading impact: this sets a precedent that authoritarian regimes will exploit. The same source notes that \"it sets a dangerous precedent to demand similar data from other companies, and provides a runway for other authoritarian governments to issue comparable orders.\" So we're not just weakening American security—we're handing a blueprint to autocrats worldwide to demand identical backdoors from the same companies. That means dissidents, journalists, and vulnerable populations globally lose their only protection against state surveillance. We cannot trade away fundamental encryption for the illusion of lawful access.",
+      "claim_ids": [
+        "doc_0c36357e5d78_c000_k00",
+        "doc_0c36357e5d78_c000_k01",
+        "doc_b43038c2e7e1_c000_k00",
+        "doc_b43038c2e7e1_c000_k01",
+        "doc_382d85f60713_c000_k00",
+        "doc_382d85f60713_c000_k01"
+      ],
+      "title": "Privacy Civil Liberties",
+      "claim": "Government-mandated backdoors into encrypted services make all users less safe by increasing vulnerability to hacking, identity theft, and fraud",
+      "warrant": "Any backdoor built for government access creates a security weakness that malicious actors can also exploit, undermining the protection encryption provides",
+      "evidence": [
+        {
+          "quote": "any backdoor built for the government puts everyone at greater risk of hacking, identity theft, and fraud",
+          "cite": "Thorin Klosowski -- The UK Is Still Trying to Backdoor Encryption for Apple Users | Electronic Frontier Foundation -- www.eff.org -- 2025-10-01",
+          "claim": "Government-mandated backdoors into encrypted services make all users less safe by increasing vulnerability to hacking, identity theft, and fraud",
+          "claim_id": "doc_0c36357e5d78_c000_k00"
+        },
+        {
+          "quote": "It sets a dangerous precedent to demand similar data from other companies, and provides a runway for other authoritarian governments to issue comparable orders.",
+          "cite": "Thorin Klosowski -- The UK Is Still Trying to Backdoor Encryption for Apple Users | Electronic Frontier Foundation -- www.eff.org -- 2025-10-01",
+          "claim": "Requiring backdoors for one government sets a precedent that authoritarian regimes can use to demand similar access from technology companies",
+          "claim_id": "doc_0c36357e5d78_c000_k01"
+        },
+        {
+          "quote": "client-side scanning fundamentally undermines end-to-end encryption, and obliterates our right to private spaces. If the government has access to one of the \"ends\" of an end-to-end encrypted communication, that communication is no longer safe and secure.",
+          "cite": "Thorin Klosowski -- Chat Control Is Back on the Menu in the EU. It Still Must Be Stopped | Electronic Frontier Foundation -- www.eff.org -- 2025-09-29",
+          "claim": "Client-side scanning fundamentally undermines end-to-end encryption by giving government access to one end of the communication",
+          "claim_id": "doc_b43038c2e7e1_c000_k00"
+        },
+        {
+          "quote": "Pursuing this approach is dangerous for everyone, but is especially perilous for journalists, whistleblowers, activists, lawyers, and human rights workers.",
+          "cite": "Thorin Klosowski -- Chat Control Is Back on the Menu in the EU. It Still Must Be Stopped | Electronic Frontier Foundation -- www.eff.org -- 2025-09-29",
+          "claim": "Lawful access requirements are especially dangerous for journalists, whistleblowers, activists, lawyers, and human rights workers",
+          "claim_id": "doc_b43038c2e7e1_c000_k01"
+        },
+        {
+          "quote": "Graphite's misuse in Italy, where it was allegedly deployed to monitor journalists, migrant rights advocates, and associates of Pope Francis.",
+          "cite": "Pedro Camacho -- ICE Agents Are Now Authorized to Use Spyware to Access Phones and Sensitive Data in Immigration Cases -- www.latintimes.com -- 2025-09-10",
+          "claim": "Government use of spyware like Graphite to access encrypted communications creates significant risks of abuse against vulnerable populations",
+          "claim_id": "doc_382d85f60713_c000_k00"
+        },
+        {
+          "quote": "Advocacy organizations warn that using spyware on immigrants could violate First Amendment protections and increase the risk of abuse by federal agencies.",
+          "cite": "Pedro Camacho -- ICE Agents Are Now Authorized to Use Spyware to Access Phones and Sensitive Data in Immigration Cases -- www.latintimes.com -- 2025-09-10",
+          "claim": "Lawful access tools that can infiltrate encrypted communications pose serious First Amendment risks",
+          "claim_id": "doc_382d85f60713_c000_k01"
+        }
+      ],
+      "impact": "Millions of users face elevated risk of cybercrime even when the backdoor is intended only for lawful government access"
+    },
+    {
+      "area": "technical_feasibility",
+      "text": "I want to present a fundamental technical problem with this resolution. The mandate assumes that technology companies can actually comply with lawful access requirements, but the architecture of modern encryption makes that impossible for an entire class of products.\n\nHere's the problem: zero-knowledge encryption systems are designed so that only users hold the encryption keys. The service provider literally cannot access the data, even if they wanted to. According to AxCrypt's documentation, \"Only you have access to your encryption keys; even AxCrypt cannot access your data.\" This means there is no technical pathway for the provider to comply with a government access order. You cannot give someone access to something you do not possess.\n\nThe impact is that this mandate would be completely unenforceable against zero-knowledge systems. Companies using this architecture could simply say they are technically unable to comply, and they would be telling the truth. So we would end up with a law that applies only to some encryption products while others operate completely outside its reach. That makes the entire regulatory framework ineffective. We cannot require what is technically impossible, and we cannot regulate an industry when half the market uses architecture that makes compliance impossible.",
+      "claim_ids": [
+        "doc_d52bc7b83232_c000_k00",
+        "doc_d58f3d5608f4_c000_k00",
+        "doc_d58f3d5608f4_c002_k00",
+        "doc_a643a385b5c8_c000_k00",
+        "doc_a21152e6560f_c000_k01",
+        "doc_a21152e6560f_c000_k02"
+      ],
+      "title": "Technical Feasibility",
+      "claim": "Zero-knowledge encryption architecture makes it technically impossible for even the service provider to access user data, undermining any lawful access mandate",
+      "warrant": "When only the user holds encryption keys and the provider has no access, there is no technical pathway for the provider to comply with a government access order",
+      "evidence": [
+        {
+          "quote": "Only you have access to your encryption keys; even AxCrypt cannot access your data.",
+          "cite": "AxCrypt GDPR Compliance – Secure Personal Data with AES-256 Encryption | AxCrypt -- axcrypt.net -- 2026-08-05",
+          "claim": "Zero-knowledge encryption architecture makes it technically impossible for even the service provider to access user data, undermining any lawful access mandate",
+          "claim_id": "doc_d52bc7b83232_c000_k00"
+        },
+        {
+          "quote": "quantum computers may solve complex problems that have stymied scientists for decades, such as modeling the behavior of subatomic particles or cracking the \"traveling salesman\" problem",
+          "cite": "Joanna Thompson -- Quantum computing will make cryptography obsolete. But computer scientists are working to make them unhackable. -- www.livescience.com -- 2025-11-14",
+          "claim": "Quantum computers will render current cryptographic protections obsolete, giving hackers a decisive advantage over defenders",
+          "claim_id": "doc_d58f3d5608f4_c000_k00"
+        },
+        {
+          "quote": "It might take a classical computer thousands or even billions of years to crack a really hard prime factorization algorithm, but a powerful quantum computer can often solve the same equation in a few hours.",
+          "cite": "Joanna Thompson -- Quantum computing will make cryptography obsolete. But computer scientists are working to make them unhackable. -- www.livescience.com -- 2025-11-14",
+          "claim": "Quantum computers pose an existential threat to current cryptographic infrastructure by being able to crack encryption that would take classical computers billions of years",
+          "claim_id": "doc_d58f3d5608f4_c002_k00"
+        },
+        {
+          "quote": "a malicious commit was discovered in the XZ Utils repository, introducing a backdoor that would compromise systems running the software. This backdoor allowed unauthorized users with a specific encryption key to inject arbitrary code via an SSH login certificate.",
+          "cite": "Zoey Chu -- How to Protect Against a Supply Chain Compromise: Takeaways From the XZ Utils Backdoor -- www.vectra.ai -- 2025-11-06",
+          "claim": "Backdoors in widely-used software create pathways for unauthorized code execution that are difficult to detect before significant damage occurs",
+          "claim_id": "doc_a643a385b5c8_c000_k00"
+        },
+        {
+          "quote": "In 90 percent of cases involving malware that utilizes TLS, these are unknown, previously undetected variants.",
+          "cite": "https://itdaily.com/author/katrienduchene/ -- Malware over Encrypted Connections Rises by 40 Percent - ITdaily -- itdaily.com -- 2025-10-22",
+          "claim": "Requiring lawful access to encrypted communications would not meaningfully reduce the cybersecurity threat posed by malware hidden in encrypted traffic",
+          "claim_id": "doc_a21152e6560f_c000_k01"
+        },
+        {
+          "quote": "Cybercriminals are using polymorphic techniques and encrypted packers, among other methods, to bypass classic antivirus solutions.",
+          "cite": "https://itdaily.com/author/katrienduchene/ -- Malware over Encrypted Connections Rises by 40 Percent - ITdaily -- itdaily.com -- 2025-10-22",
+          "claim": "The proliferation of diverse and evasive malware strains demonstrates that weakening encryption through backdoors would increase overall cybersecurity risk",
+          "claim_id": "doc_a21152e6560f_c000_k02"
+        }
+      ],
+      "impact": "Lawful access requirements would be unenforceable against zero-knowledge systems, rendering the mandate ineffective for a significant class of encryption products"
+    }
+  ]
+}

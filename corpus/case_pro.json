@@ -1,0 +1,168 @@
+{
+  "resolution": "Resolved: The United States federal government should require technology companies to provide lawful access to encrypted communications.",
+  "side": "pro",
+  "contentions": [
+    {
+      "area": "law_enforcement_access",
+      "text": "I'm going to focus on the cartel violence evidence because it demonstrates the concrete public safety imperative behind our position.\n\nHere's my contention: Requiring lawful access to encrypted communications is necessary because cartels exploit encryption to coordinate violence that devastates civilian populations, and law enforcement needs these tools to disrupt that coordination.\n\nThe mechanism works like this. When cartels lose leadership, rival factions fight for control. During El Mayo Zambada's capture, we saw exactly what happens. According to CNN's analysis, \"Since his capture, homicides in Sinaloa have risen by more than 400%, according to an analysis of public data conducted by CNN.\" That's not abstract—that's hundreds of additional deaths in a single region.\n\nThe impact is severe. Cartels use encrypted communications to organize these conflicts while civilians get trapped in the crossfire and businesses shut down. Law enforcement can't effectively monitor or disrupt these operations without access to those communications.\n\nThe affirmative position isn't about invading privacy arbitrarily. It's about giving law enforcement the legal tools to access communications when they have probable cause—the same standard that applies to every other investigative technique. Without lawful access requirements, we're essentially surrendering our ability to prevent the next wave of cartel-driven violence.",
+      "claim_ids": [
+        "doc_a21152e6560f_c000_k00",
+        "doc_e2247eb3ed77_c000_k00",
+        "doc_e2247eb3ed77_c000_k01",
+        "doc_44b2092207fc_c000_k00",
+        "doc_44b2092207fc_c000_k01",
+        "doc_9ddf9a6066ad_c000_k00"
+      ],
+      "title": "Law Enforcement Access",
+      "claim": "Encryption is increasingly being weaponized by cybercriminals to conceal malware, undermining the security argument for universal strong encryption",
+      "warrant": "70 percent of all malware attacks are now carried out via encrypted TLS connections, with criminals exploiting the same technology meant to protect users",
+      "evidence": [
+        {
+          "quote": "70 percent of all malware attacks are now carried out via encrypted TLS connections. This technology was originally intended to secure web traffic but is now widely misused to conceal malicious code.",
+          "cite": "https://itdaily.com/author/katrienduchene/ -- Malware over Encrypted Connections Rises by 40 Percent - ITdaily -- itdaily.com -- 2025-10-22",
+          "claim": "Encryption is increasingly being weaponized by cybercriminals to conceal malware, undermining the security argument for universal strong encryption",
+          "claim_id": "doc_a21152e6560f_c000_k00"
+        },
+        {
+          "quote": "Since his capture, homicides in Sinaloa have risen by more than 400%, according to an analysis of public data conducted by CNN.",
+          "cite": "Rocío Muñoz-Ledo, Avery Schmitz, Veronica Calderon -- A cartel war bleeding Sinaloa dry: homicides rise 400% in the year after the fall of ‘El Mayo’ -- www.cnn.com -- 2025-08-18",
+          "claim": "Cartel leadership disruptions trigger dramatic surges in internal cartel violence that devastate civilian populations",
+          "claim_id": "doc_e2247eb3ed77_c000_k00"
+        },
+        {
+          "quote": "Historically, Mexican authorities have underreported the number of victims during periods of violence in the region.\nEven behind closed doors, U.S. defense and law enforcement officials distrust Mexico's homicide figures",
+          "cite": "Rocío Muñoz-Ledo, Avery Schmitz, Veronica Calderon -- A cartel war bleeding Sinaloa dry: homicides rise 400% in the year after the fall of ‘El Mayo’ -- www.cnn.com -- 2025-08-18",
+          "claim": "Mexican authorities systematically underreport cartel violence, making it harder for law enforcement to understand and respond to the true scale of organized crime",
+          "claim_id": "doc_e2247eb3ed77_c000_k01"
+        },
+        {
+          "quote": "A number of civil society groups and commercial entities opposed to what law enforcement and the security agencies want have rightly concluded the term \"back door\" conjures up dark and worrying scenarios.",
+          "cite": "John Carr -- Let’s Stop Calling it a “Back Door” -- john1912.substack.com -- 2025-07-23",
+          "claim": "The term 'back door' is intentionally misleading framing used by opponents of lawful access to undermine legitimate law enforcement requests",
+          "claim_id": "doc_44b2092207fc_c000_k00"
+        },
+        {
+          "quote": "no international law or treaty of any kind, and no country's national laws anywhere in the world, has ever declared privacy to be an absolute right. It is always described as a qualified right, often described as a \"fundamental\" right, but never an absolute right. E2EE threatens to make it one.",
+          "cite": "John Carr -- Let’s Stop Calling it a “Back Door” -- john1912.substack.com -- 2025-07-23",
+          "claim": "End-to-end encryption effectively places privacy beyond any legal accountability, creating an absolute right that no democratic process ever authorized",
+          "claim_id": "doc_44b2092207fc_c000_k01"
+        },
+        {
+          "quote": "Over the last five years, authorities have seen younger perpetrators, new online spaces for radicalization, and new targets.",
+          "cite": "Kristina Hummel -- The Evolution of the Islamist Terror Threat Landscape in Germany Since 2020 - Combating Terrorism Center at West Point -- ctc.westpoint.edu -- 2025-05-30",
+          "claim": "Online radicalization in new digital spaces is driving younger perpetrators toward Islamist terrorism in Germany",
+          "claim_id": "doc_9ddf9a6066ad_c000_k00"
+        }
+      ],
+      "impact": "Mandating lawful access backdoors could be justified partly because encryption already serves as a tool for attackers, not just defenders"
+    },
+    {
+      "area": "terrorism_national_security",
+      "text": "I want to present a contention about the evolving nature of terrorist threats and why lawful access becomes necessary to counter them effectively.\n\nThe Islamic State demonstrates this perfectly. According to Kian Sharifi from RFE/RL, \"IS remains a persistent global security threat and the deadliest terrorist organization in the world.\" But here's what's critical: the organization has fundamentally transformed. It's no longer a centralized proto-state we can target geographically. Instead, it operates as a decentralized network of regional affiliates working independently. Sharifi explains that \"IS might be even more challenging as a decentralized organization than it was as a proto-state. When it was running a proto-state, it was a big target.\"\n\nThis matters enormously for our case. When terrorist organizations go decentralized, they rely heavily on encrypted communications to coordinate across borders and maintain operational security. Traditional surveillance methods become ineffective against distributed networks. Without lawful access to encrypted communications, we're essentially blind to how these groups organize, recruit, and plan attacks. The government needs the tools to penetrate these hidden networks, and that requires requiring technology companies to provide lawful access. Otherwise, we're ceding the digital battlefield to our most dangerous adversaries.",
+      "claim_ids": [
+        "doc_76fead77ff68_c000_k02",
+        "doc_38e64c0b7088_c000_k00",
+        "doc_38e64c0b7088_c000_k01",
+        "doc_c0f0fdff174a_c000_k00",
+        "doc_c0f0fdff174a_c000_k01",
+        "doc_9388d300d5f3_c001_k00"
+      ],
+      "title": "Terrorism National Security",
+      "claim": "Democratic governments are increasingly pursuing lawful access to encrypted communications to fight terrorism and protect children",
+      "warrant": "The UK's Investigatory Powers Act grants broad surveillance powers including the ability to compel companies to weaken encryption, reflecting a policy trend among democracies",
+      "evidence": [
+        {
+          "quote": "Some democracies led by the UK now are considering imposing strict requirements in order to fight terrorism and to protect children.",
+          "cite": "Joshua Stein -- Encryption Backdoors: From Child Safety To Houthis - CEPA -- cepa.org -- 2025-04-11",
+          "claim": "Democratic governments are increasingly pursuing lawful access to encrypted communications to fight terrorism and protect children",
+          "claim_id": "doc_76fead77ff68_c000_k02"
+        },
+        {
+          "quote": "Mexican cartels continue to evolve their use of social platforms and encrypted messaging apps to bypass moderation and recruit new members online",
+          "cite": "https://www.facebook.com/ResolverInc/ -- DSA Compliance &amp; Mexican Cartels: Moderation Challenges -- www.resolver.com -- 2025-03-26",
+          "claim": "Mexican cartels use encrypted messaging apps to bypass content moderation and recruit new members online",
+          "claim_id": "doc_38e64c0b7088_c000_k00"
+        },
+        {
+          "quote": "Since 2018, cartel-related violence in Mexico has resulted in over 30,000 deaths per year. Mexican President Claudia Sheinbaum's tenure has been described by Mexican media as \"100 days of terror\", with over 500 people killed in cartel violence in Culiacan alone between September and December 2024.",
+          "cite": "https://www.facebook.com/ResolverInc/ -- DSA Compliance &amp; Mexican Cartels: Moderation Challenges -- www.resolver.com -- 2025-03-26",
+          "claim": "Cartel-related violence causes massive ongoing casualties, demonstrating the urgency of disrupting their communications",
+          "claim_id": "doc_38e64c0b7088_c000_k01"
+        },
+        {
+          "quote": "IS might be even more challenging as a decentralized organization than it was as a proto-state. When it was running a proto-state, it was a big target",
+          "cite": "Kian Sharifi -- Islamic State Is Evolving, But Has The World Taken Its Eyes Off The Ball? -- www.rferl.org -- 2025-03-24",
+          "claim": "The Islamic State remains a persistent and evolving global security threat despite its territorial defeat in 2019",
+          "claim_id": "doc_c0f0fdff174a_c000_k00"
+        },
+        {
+          "quote": "IS remains a persistent global security threat and the deadliest terrorist organization in the world",
+          "cite": "Kian Sharifi -- Islamic State Is Evolving, But Has The World Taken Its Eyes Off The Ball? -- www.rferl.org -- 2025-03-24",
+          "claim": "IS's decentralized affiliate network makes it a more dangerous terrorist organization than when it held territory",
+          "claim_id": "doc_c0f0fdff174a_c000_k01"
+        },
+        {
+          "quote": "Total estimated cybercrime impact: $1.2T - $1.5T per year by end of year, 2025",
+          "cite": "Gary -- The True Cost of Cybercrime: Why Global Damages Could Reach $1.2 - $1.5 Trillion by End of Year 2025 - Cyber Defense Magazine -- www.cyberdefensemagazine.com -- 2025-03-13",
+          "claim": "Cybercrime represents a global economic crisis costing up to $1.5 trillion annually by 2025",
+          "claim_id": "doc_9388d300d5f3_c001_k00"
+        }
+      ],
+      "impact": "Establishes precedent and political momentum for encryption backdoor requirements in democratic nations including the US"
+    },
+    {
+      "area": "organized_crime_cartels",
+      "text": "My first contention is that organized crime cartels are weaponizing encryption to coordinate devastating attacks on American communities, and lawful access is essential to stop them.\n\nHere's the mechanism: Mexican drug cartels have entered the cybercrime economy and are now capable of coordinating cyber attacks with physical terror campaigns. According to Katherine Walla at the Atlantic Council, \"By potentially coordinating cyber activities with campaigns of terror in cartel-influenced US neighborhoods, these groups could sow panic and destabilize communities, driving Americans to call for a cessation of operations against the cartels in Mexico.\"\n\nBut the threat extends beyond coordinated attacks. Cartel cyber operations targeting government institutions create cascading failures across entire communities. When a government department suspends operations to repair security breaches, \"those effects could expand across communities.\" This means cartels using encrypted platforms to plan cyberattacks can effectively shut down the government services that civilians depend on.\n\nThe impact is clear: without lawful access to the encrypted communications where cartels coordinate these operations, we cannot gather the evidence needed to stop them before they destabilize American neighborhoods and compromise critical infrastructure. That's why requiring technology companies to provide lawful access is necessary to protect public safety from this emerging cartel threat.",
+      "claim_ids": [
+        "doc_aea8477ab58e_c003_k00",
+        "doc_aea8477ab58e_c003_k01",
+        "doc_cdd039e46418_c000_k01",
+        "doc_cdd039e46418_c001_k00",
+        "doc_9c1d4e42c4ec_c000_k01",
+        "doc_9c1d4e42c4ec_c002_k02"
+      ],
+      "title": "Organized Crime Cartels",
+      "claim": "Mexican drug cartels' growing cybercrime capabilities pose a destabilizing threat to US communities",
+      "warrant": "Cartels have entered the 'cybercrime as a service' economy and could coordinate cyber attacks with physical terror campaigns in cartel-influenced US neighborhoods to sow panic",
+      "evidence": [
+        {
+          "quote": "By potentially coordinating cyber activities with campaigns of terror in cartel-influenced US neighborhoods, these groups could sow panic and destabilize communities, driving Americans to call for a cessation of operations against the cartels in Mexico.",
+          "cite": "Katherine Walla -- US intervention against Mexican cartels carries major risks. Here’s how to mitigate them. - Atlantic Council -- www.atlanticcouncil.org -- 2025-01-14",
+          "claim": "Mexican drug cartels' growing cybercrime capabilities pose a destabilizing threat to US communities",
+          "claim_id": "doc_aea8477ab58e_c003_k00"
+        },
+        {
+          "quote": "Cartel cyber activity could bear significant effects for the target of such operations; and if the target (for example, a government department or agency) suspends its normal operations to repair its security walls, those effects could expand across communities.",
+          "cite": "Katherine Walla -- US intervention against Mexican cartels carries major risks. Here’s how to mitigate them. - Atlantic Council -- www.atlanticcouncil.org -- 2025-01-14",
+          "claim": "Cartel cyberattacks on government institutions could have cascading effects on entire communities",
+          "claim_id": "doc_aea8477ab58e_c003_k01"
+        },
+        {
+          "quote": "MATRIX's 40 servers spread across Europe facilitated the communications of at least 8,000 user accounts, who paid between $1350 and $1700 in cryptocurrency for a Google Pixel-based device and a six-month subscription to the service installed on the phone.",
+          "cite": "Bill Toulas -- Police seize Matrix encrypted chat service after spying on criminals -- www.bleepingcomputer.com -- 2024-12-03",
+          "claim": "Encrypted messaging platforms are actively used by criminals to coordinate illegal activities and evade law enforcement",
+          "claim_id": "doc_cdd039e46418_c000_k01"
+        },
+        {
+          "quote": "once law enforcement learns about their infrastructure, they can gather significant evidence of criminal acts by monitoring intercepted messages or through seized servers.",
+          "cite": "Bill Toulas -- Police seize Matrix encrypted chat service after spying on criminals -- www.bleepingcomputer.com -- 2024-12-03",
+          "claim": "Law enforcement can gather significant criminal evidence by monitoring intercepted messages or seizing servers from encrypted phone services once they learn about the infrastructure",
+          "claim_id": "doc_cdd039e46418_c001_k00"
+        },
+        {
+          "quote": "Prioritizing privacy to the exclusion of law enforcement's need to access evidence creates \"lawless\" digital spaces for terrorists and criminals.",
+          "cite": "Lawful Access: Myths vs. Reality -- www.fbi.gov -- 2024-09-23",
+          "claim": "Prioritizing absolute privacy over lawful access creates ungoverned digital spaces that benefit terrorists and criminals",
+          "claim_id": "doc_9c1d4e42c4ec_c000_k01"
+        },
+        {
+          "quote": "The warrant-proof encryption problem is not isolated to the FBI or federal law enforcement. Our state and local law enforcement partners are advising that they, too, are experiencing warrant-proof encryption challenges.",
+          "cite": "Lawful Access: Myths vs. Reality -- www.fbi.gov -- 2024-09-23",
+          "claim": "The encryption access problem extends beyond federal law enforcement to state and local agencies",
+          "claim_id": "doc_9c1d4e42c4ec_c002_k02"
+        }
+      ],
+      "impact": "Coordinated cyber and physical attacks could destabilize communities and pressure the US government to halt counter-cartel operations"
+    }
+  ]
+}

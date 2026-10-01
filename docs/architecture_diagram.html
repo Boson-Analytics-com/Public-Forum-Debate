@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Two Roads to a Verdict</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#F3F5F1;
+    --surface:#FDFEFC;
+    --ink:#182019;
+    --muted:#5B665D;
+    --rule:#D8DED4;
+    --verified:#1E7A52;
+    --verified-tint:#E4F1E9;
+    --con:#B14428;
+    --con-tint:#F6E7E1;
+    --tool:#3C5A78;
+    --shadow:0 1px 2px rgba(24,32,25,.04), 0 1px 14px rgba(24,32,25,.05);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#10140F; --surface:#171D15; --ink:#E9EDE7; --muted:#98A599; --rule:#2A322A;
+      --verified:#4FCB92; --verified-tint:rgba(79,203,146,.14);
+      --con:#E58B6C; --con-tint:rgba(229,139,108,.14);
+      --tool:#8FB3D6;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 1px 20px rgba(0,0,0,.25);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10140F; --surface:#171D15; --ink:#E9EDE7; --muted:#98A599; --rule:#2A322A;
+    --verified:#4FCB92; --verified-tint:rgba(79,203,146,.14);
+    --con:#E58B6C; --con-tint:rgba(229,139,108,.14);
+    --tool:#8FB3D6;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 1px 20px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box;}
+  html,body{ margin:0; }
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:1160px; margin:0 auto; padding-inline:1.25rem; padding-block:2.75rem calc(2.75rem + env(safe-area-inset-bottom,0px)); }
+  code{ font-family:"IBM Plex Mono", ui-monospace, monospace; }
+  h1{ text-wrap:balance; }
+  .eyebrow{
+    font-family:"IBM Plex Mono", monospace; font-size:.78rem; font-weight:500;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--verified); margin-bottom:.9rem;
+  }
+  h1.title{
+    font-family:"Big Shoulders Display", sans-serif; font-weight:900;
+    font-size:clamp(2rem, 5.5vw, 3.1rem); line-height:.98; margin:0 0 1rem;
+  }
+  .dek{ max-width:70ch; font-size:1.04rem; color:var(--muted); margin:0 0 2rem; }
+  .dek b{ color:var(--ink); font-weight:600; }
+
+  figure{ margin:0; }
+  .diagram-frame{
+    background:var(--surface); border:1px solid var(--rule); border-radius:12px;
+    padding:1.5rem; box-shadow:var(--shadow); overflow-x:auto;
+  }
+  svg{ display:block; min-width:960px; width:100%; height:auto; }
+  figcaption{
+    margin-top:1rem; font-size:.92rem; color:var(--muted); max-width:75ch;
+  }
+  figcaption b{ color:var(--ink); }
+
+  .legend{
+    display:flex; flex-wrap:wrap; gap:1.6rem; margin-top:1.75rem;
+    font-size:.85rem; color:var(--muted);
+  }
+  .legend-item{ display:flex; align-items:center; gap:.55rem; }
+  .swatch{ width:28px; height:0; border-top-width:3px; border-top-style:solid; flex:none; }
+  .swatch.box-solid{ width:22px; height:16px; border:1.5px solid var(--ink); border-radius:4px; }
+  .swatch.box-dashed{ width:22px; height:16px; border:1.5px dashed var(--ink); border-radius:4px; }
+  .swatch.line-neutral{ border-color:var(--muted); }
+  .swatch.line-green{ border-color:var(--verified); }
+  .swatch.line-red{ border-color:var(--con); border-top-style:dashed; }
+
+  footer{
+    margin-top:2.5rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+    color:var(--muted); font-size:.82rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Companion diagram — Public Forum debate tool</div>
+  <h1 class="title">Two roads to a verdict.</h1>
+  <p class="dek">
+    Every run builds the same knowledge base and calls the same argument-generation code.
+    But the two ways to actually run a round write <b>incompatible state schemas</b> — and
+    the judge can only read one of them.
+  </p>
+
+  <figure>
+    <div class="diagram-frame">
+      <svg viewBox="0 0 1280 900" role="img"
+           aria-label="Diagram: the scraping and knowledge-base pipeline (extract_urls.py through index.py, ending at kb.sqlite) feeds the shared debate.py, round.py and opponent.py modules. round.py has two entry points — engine.py run/batch, and engine.py debate — which write to round_state.json plus corpus/rounds, or debate_state.json plus corpus/debates. judge.py can score the debates archive cleanly, but crashes with an AttributeError on the rounds archive.">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 Z" fill="currentColor"/>
+          </marker>
+        </defs>
+
+        <!-- ================= TOP ROW: build pipeline ================= -->
+        <!-- connecting arrows first, so boxes sit on top -->
+        <g style="color:var(--muted)" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="165" y1="70" x2="193" y2="70" marker-end="url(#arrow)"/>
+          <line x1="345" y1="70" x2="373" y2="70" marker-end="url(#arrow)"/>
+          <line x1="525" y1="70" x2="553" y2="70" marker-end="url(#arrow)"/>
+          <line x1="705" y1="70" x2="733" y2="70" marker-end="url(#arrow)"/>
+          <line x1="885" y1="70" x2="913" y2="70" marker-end="url(#arrow)"/>
+          <line x1="1065" y1="70" x2="1093" y2="70" marker-end="url(#arrow)"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="var(--muted)" text-anchor="middle">
+          <text x="179" y="27">urls.csv</text>
+          <text x="359" y="27">raw HTML</text>
+          <text x="539" y="27">documents.jsonl</text>
+          <text x="715" y="27">chunks.jsonl</text>
+          <text x="897" y="27">claims.jsonl</text>
+          <text x="1067" y="27">build</text>
+        </g>
+
+        <!-- top-row boxes -->
+        <g font-family="IBM Plex Mono, monospace" font-size="12.5" text-anchor="middle" font-weight="600">
+          <g>
+            <rect x="15" y="42" width="150" height="56" rx="9" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text x="90" y="75" fill="var(--ink)">extract_urls.py</text>
+          </g>
+          <g>
+            <rect x="195" y="42" width="150" height="56" rx="9" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text x="270" y="75" fill="var(--ink)">fetch.py</text>
+          </g>
+          <g>
+            <rect x="375" y="42" width="150" height="56" rx="9" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text x="450" y="75" fill="var(--ink)">parse.py</text>
+          </g>
+          <g>
+            <rect x="555" y="42" width="150" height="56" rx="9" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text x="630" y="75" fill="var(--ink)">chunk.py</text>
+          </g>
+          <g>
+            <rect x="735" y="42" width="150" height="56" rx="9" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text x="810" y="66" fill="var(--ink)">claims.py</text>
+            <text x="810" y="84" font-size="9.5" font-weight="400" fill="var(--muted)">+ bedrock_opus</text>
+          </g>
+          <g>
+            <rect x="915" y="42" width="150" height="56" rx="9" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text x="990" y="75" fill="var(--ink)">index.py</text>
+          </g>
+          <g>
+            <rect x="1095" y="42" width="150" height="56" rx="9" fill="var(--surface)" stroke="var(--ink)" stroke-dasharray="5 4" stroke-width="1.5"/>
+            <text x="1170" y="75" fill="var(--ink)">kb.sqlite</text>
+          </g>
+        </g>
+
+        <!-- ================= resolution.json ================= -->
+        <g stroke="var(--muted)" stroke-width="2" fill="none">
+          <line x1="810" y1="194" x2="810" y2="100" marker-end="url(#arrow)"/>
+          <polyline points="740,220 660,220 660,343" marker-end="url(#arrow)"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="var(--muted)" text-anchor="middle">
+          <rect x="750" y="140" width="120" height="17" fill="var(--bg)"/>
+          <text x="810" y="152">contention_tags</text>
+          <rect x="600" y="211" width="118" height="17" fill="var(--bg)"/>
+          <text x="659" y="223">resolution text</text>
+        </g>
+        <rect x="740" y="196" width="140" height="48" rx="8" fill="var(--surface)" stroke="var(--ink)" stroke-dasharray="5 4" stroke-width="1.5"/>
+        <text x="810" y="225" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" fill="var(--ink)" text-anchor="middle">resolution.json</text>
+
+        <!-- ================= kb.sqlite bus into hub row ================= -->
+        <g stroke="var(--muted)" stroke-width="2" fill="none">
+          <line x1="1170" y1="98" x2="1170" y2="300"/>
+          <line x1="1170" y1="300" x2="380" y2="300"/>
+          <line x1="380" y1="300" x2="380" y2="343" marker-end="url(#arrow)"/>
+          <line x1="620" y1="300" x2="620" y2="343" marker-end="url(#arrow)"/>
+          <line x1="900" y1="300" x2="900" y2="343" marker-end="url(#arrow)"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="var(--muted)" text-anchor="middle">
+          <rect x="700" y="291" width="150" height="17" fill="var(--bg)"/>
+          <text x="775" y="303">search() / rebut()</text>
+        </g>
+
+        <!-- ================= HUB ROW ================= -->
+        <g stroke="var(--ink)" stroke-width="2" fill="none">
+          <line x1="530" y1="380" x2="482" y2="380" marker-end="url(#arrow)"/>
+          <line x1="750" y1="380" x2="798" y2="380" marker-end="url(#arrow)"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--muted)" text-anchor="middle">
+          <text x="505" y="333">case()/respond()</text>
+          <text x="775" y="333">attack/rebuttal</text>
+        </g>
+
+        <g font-family="IBM Plex Mono, monospace" font-size="13" text-anchor="middle" font-weight="600">
+          <g>
+            <rect x="280" y="345" width="200" height="70" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text x="380" y="374" fill="var(--ink)">debate.py</text>
+            <text x="380" y="393" font-size="10" font-weight="400" fill="var(--muted)" font-family="IBM Plex Sans, sans-serif">argument generation</text>
+          </g>
+          <g>
+            <rect x="530" y="345" width="220" height="70" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/>
+            <text x="640" y="374" fill="var(--ink)">round.py</text>
+            <text x="640" y="393" font-size="10" font-weight="400" fill="var(--muted)" font-family="IBM Plex Sans, sans-serif">state &amp; orchestration</text>
+          </g>
+          <g>
+            <rect x="800" y="345" width="200" height="70" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+            <text x="900" y="374" fill="var(--ink)">opponent.py</text>
+            <text x="900" y="393" font-size="10" font-weight="400" fill="var(--muted)" font-family="IBM Plex Sans, sans-serif">AI opponent</text>
+          </g>
+        </g>
+
+        <!-- ================= round.py forks to two state stores ================= -->
+        <g stroke="var(--ink)" stroke-width="2" fill="none">
+          <polyline points="590,415 480,460 480,533" marker-end="url(#arrow)"/>
+          <polyline points="690,415 800,460 800,533" marker-end="url(#arrow)"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="var(--muted)" text-anchor="middle">
+          <rect x="415" y="443" width="100" height="17" fill="var(--bg)"/>
+          <text x="465" y="455">run / batch</text>
+          <rect x="745" y="443" width="180" height="17" fill="var(--bg)"/>
+          <text x="835" y="455">debate --human-side</text>
+        </g>
+
+        <g font-family="IBM Plex Mono, monospace" font-size="12.5" text-anchor="middle" font-weight="600">
+          <g>
+            <rect x="370" y="535" width="220" height="70" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-dasharray="5 4" stroke-width="1.5"/>
+            <text x="480" y="564" fill="var(--ink)">round_state.json</text>
+            <text x="480" y="583" font-size="10.5" font-weight="400" fill="var(--muted)">→ corpus/rounds/*.json</text>
+          </g>
+          <g>
+            <rect x="690" y="535" width="220" height="70" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-dasharray="5 4" stroke-width="1.5"/>
+            <text x="800" y="564" fill="var(--ink)">debate_state.json</text>
+            <text x="800" y="583" font-size="10.5" font-weight="400" fill="var(--muted)">→ corpus/debates/*.json</text>
+          </g>
+        </g>
+
+        <!-- ================= into judge.py: the one real fork ================= -->
+        <path d="M480,605 C480,660 560,670 596,703" fill="none" stroke="var(--con)" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)" style="color:var(--con)"/>
+        <path d="M800,605 C800,660 720,670 684,703" fill="none" stroke="var(--verified)" stroke-width="2.5" marker-end="url(#arrow)" style="color:var(--verified)"/>
+
+        <g font-family="IBM Plex Mono, monospace" font-size="11" text-anchor="middle" font-weight="600">
+          <rect x="392" y="650" width="118" height="17" fill="var(--bg)"/>
+          <text x="451" y="662" fill="var(--con)">AttributeError</text>
+          <rect x="770" y="650" width="118" height="17" fill="var(--bg)"/>
+          <text x="829" y="662" fill="var(--verified)">scores cleanly</text>
+        </g>
+
+        <g>
+          <text x="451" y="642" font-family="IBM Plex Sans, sans-serif" font-size="16" text-anchor="middle" fill="var(--con)">✕</text>
+          <text x="829" y="642" font-family="IBM Plex Sans, sans-serif" font-size="16" text-anchor="middle" fill="var(--verified)">✓</text>
+        </g>
+
+        <!-- ================= judge.py ================= -->
+        <g font-family="IBM Plex Mono, monospace" font-size="14" text-anchor="middle" font-weight="600">
+          <rect x="550" y="705" width="180" height="70" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/>
+          <text x="640" y="736" fill="var(--ink)">judge.py</text>
+          <text x="640" y="756" font-size="10.5" font-weight="400" fill="var(--muted)" font-family="IBM Plex Sans, sans-serif">two-sided verdict</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>
+      <b>extract_urls.py → fetch.py → parse.py → chunk.py → claims.py → index.py</b> build
+      <code>kb.sqlite</code> once. From there, <code>debate.py</code> and <code>opponent.py</code>
+      do the actual arguing for either mode, but <code>round.py</code> has two entry points that
+      keep separate memory: <code>engine.py run</code>/<code>batch</code> (no human, writes
+      <code>round_state.json</code>) and <code>engine.py debate --human-side</code> (a person
+      argues one side, writes <code>debate_state.json</code>). <code>judge.py</code> was built
+      against the second schema only — so the self-play path's own archive crashes it.
+    </figcaption>
+  </figure>
+
+  <div class="legend">
+    <div class="legend-item"><span class="swatch box-solid"></span> running code (a .py module)</div>
+    <div class="legend-item"><span class="swatch box-dashed"></span> a file on disk</div>
+    <div class="legend-item"><span class="swatch line-green"></span> reaches judge.py cleanly</div>
+    <div class="legend-item"><span class="swatch line-red"></span> crashes judge.py</div>
+  </div>
+
+  <footer>
+    Companion to Flowsheet — same source, drawn as a mechanism instead of a file list. Generated
+    from the checked-in source; not a git repository, so treat this as a snapshot.
+  </footer>
+
+</div>
+</body>
+</html>

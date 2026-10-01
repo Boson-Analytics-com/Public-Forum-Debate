@@ -1,0 +1,10 @@
+{
+  "documents": 173,
+  "chunks": 2215,
+  "offset_mismatches": 0,
+  "chunks_per_doc_avg": 12.8,
+  "words_min": 11,
+  "words_median": 288,
+  "words_max": 2805,
+  "with_heading_pct": 28.1
+}
