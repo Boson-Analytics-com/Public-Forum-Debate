@@ -1,0 +1,9 @@
+streamlit
+boto3
+python-dotenv
+sentence-transformers
+requests
+beautifulsoup4
+lxml
+trafilatura
+pymupdf
